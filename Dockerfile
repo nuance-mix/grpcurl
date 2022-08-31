@@ -1,4 +1,6 @@
+
 FROM golang:1.19-alpine as builder
+
 ARG ${VERSION:-1.0.0}
 MAINTAINER FullStory Engineering
 
