@@ -120,7 +120,7 @@ jobs:
           context: .
           file: ./Dockerfile
           push: ${{ github.event_name != 'pull_request' }}
-          tags: ${{ secrets.DEVACR_URL }}/${{ env.IMAGE_NAME }}:${{ steps.tag.outputs.tag }}
+          tags: ${{ steps.prep.outputs.tags }}
           labels: |
             org.opencontainers.image.source=${{ github.event.repository.html_url }}
             org.opencontainers.image.created=${{ steps.prep.outputs.created }}
