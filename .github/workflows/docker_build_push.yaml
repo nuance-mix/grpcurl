@@ -76,7 +76,7 @@ jobs:
         id: prep
         run: |
           ACR_REPOSITORY_NAME=$(echo "$GITHUB_REPOSITORY" | awk -F / '{print $2}')
-          ACR_REGISTRY_PATH="${{ secrets.DEVACR_URL }}/${REPOSITORY_NAME}"
+          ACR_REGISTRY_PATH="${{ secrets.DEVACR_URL }}/${ACR_REPOSITORY_NAME}"
           VERSION=edge
           if [[ $GITHUB_REF == refs/tags/* ]]; then
             VERSION=${GITHUB_REF#refs/tags/}
