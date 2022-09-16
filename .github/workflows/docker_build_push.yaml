@@ -6,8 +6,6 @@ on:
     tags:
       - '*'         # matches every tag that doesn't contain a '/'
 
-env:
-  IMAGE_NAME: grpcurl
 
 jobs:
   build_and_push_image:
